@@ -1,0 +1,21 @@
+div {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+div.icons {
+    background-color: #AAF;
+}
+
+.icons img {
+    border-radius: 20px;
+}
+
+#description {
+    border: 1px solid blue;
+}
+
+thead, th {
+    border-bottom: 1px solid black;
+}

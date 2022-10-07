@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>DVDRental</title>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
 </head>
 <body>
 <h1>DVDRental superstore</h1>
-<div>
+<div class="icons">
     <img src="/images/dvdrental_logo.png" width="60px">
 </div>
-<div>
+<div id="description">
     <p>DVDRental’s mission statement is “To be the global leader in rentable home entertainment by providing outstanding
         service, selection, convenience and value.”
         DVDRental strongly values diversity due to the fact that it is a global corporation and its workforce and
@@ -42,28 +43,23 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>33</td>
-            <td>Startrek</td>
-            <td>old scifi</td>
-            <td>1975</td>
-            <td></td>
-            <td></td>
+        <tr th:each="movie: ${movies}">
+            <td th:text="${movie.id}">33</td>
+            <td th:text="${movie.title}">Startrek</td>
+            <td th:text="${movie.description}">old scifi</td>
+            <td th:text="${movie.releaseYear}">1975</td>
+            <td th:text="${movie.rating}">1975</td>
+            <td th:text="${movie.category}">1975</td>
         </tr>
-        <tr>
-            <td>35</td>
-            <td>Wells</td>
-            <td>old western</td>
-            <td>1978</td>
-            <td></td>
-            <td></td>
-        </tr>
-
         </tbody>
     </table>
 </div>
+
 <div>
-    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=19.046384990215305%2C47.47762667598349%2C19.048895537853245%2C47.47883583049229&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=19/47.47823/19.04764">View Larger Map</a></small>
+    <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=19.046384990215305%2C47.47762667598349%2C19.048895537853245%2C47.47883583049229&amp;layer=mapnik"
+            style="border: 1px solid black"></iframe>
+    <br/><small><a href="https://www.openstreetmap.org/#map=19/47.47823/19.04764">View Larger Map</a></small>
 </div>
 </body>
 </html>
